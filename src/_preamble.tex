@@ -1,18 +1,67 @@
-\documentclass[letterpaper,11pt]{article} % Increased base font size to 12pt
+\documentclass[letterpaper,12pt]{article} % Increased base font size to 12pt
 
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage{hyperref}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
+\usepackage{fontspec}
 \usepackage{multicol}
 \usepackage{fancyhdr}
 \usepackage{xcolor} % For \textcolor
 % \usepackage{meta}
 \usepackage[skip=8pt, indent=24pt]{parskip}
+
+%% Base-16 color theme (https://tinted-theming.github.io/base16-gallery/)
+\definecolor{base00}{HTML}{f9f5d7}
+\definecolor{base01}{HTML}{fbf1c7}
+\definecolor{base02}{HTML}{e0cfa9}
+\definecolor{base03}{HTML}{a89984}
+\definecolor{base04}{HTML}{c9b99a}
+\definecolor{base05}{HTML}{654735}
+\definecolor{base06}{HTML}{3c3836}
+\definecolor{base07}{HTML}{282828}
+\definecolor{base08}{HTML}{c14a4a}
+\definecolor{base09}{HTML}{c35e0a}
+\definecolor{base0A}{HTML}{b47109}
+\definecolor{base0B}{HTML}{6c782e}
+\definecolor{base0C}{HTML}{4c7a5d}
+\definecolor{base0D}{HTML}{45707a}
+\definecolor{base0E}{HTML}{945e80}
+\definecolor{base0F}{HTML}{e78a4e}
+
+% gruvbox-material-dark-hard
+% \definecolor{base00}{HTML}{202020}
+% \definecolor{base00}{HTML}{202020}
+% \definecolor{base01}{HTML}{2a2827}
+% \definecolor{base02}{HTML}{504945}
+% \definecolor{base03}{HTML}{5a524c}
+% \definecolor{base04}{HTML}{bdae93}
+% \definecolor{base05}{HTML}{ddc7a1}
+% \definecolor{base06}{HTML}{ebdbb2}
+% \definecolor{base07}{HTML}{fbf1c7}
+% \definecolor{base08}{HTML}{ea6962}
+% \definecolor{base09}{HTML}{e78a4e}
+% \definecolor{base0A}{HTML}{d8a657}
+% \definecolor{base0B}{HTML}{a9b665}
+% \definecolor{base0C}{HTML}{89b482}
+% \definecolor{base0D}{HTML}{7daea3}
+% \definecolor{base0E}{HTML}{d3869b}
+% \definecolor{base0F}{HTML}{bd6f3e}
+
+% Define fonts & colors
+\setmainfont{JetBrainsMono Nerd Font}
+\pagecolor{base00} % background
+\color{base05}     % text/bullets
+% change bold color
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\textcolor{base06}{\oldtextbf{#1}}}
+% change italic color
+\let\oldtextit\textit
+\renewcommand{\textit}[1]{\textcolor{base05}{\oldtextit{#1}}}
+\usepackage[colorlinks=true,  urlcolor=base0D]{hyperref}
 
 
 \setlength{\multicolsep}{-3.0pt}
@@ -34,11 +83,12 @@
 \addtolength{\textheight}{1.4in}
 \urlstyle{same}
 \raggedbottom
+\raggedright
 
 % Sections formatting
 \titleformat{\section}{
-	\vspace{0pt}\scshape\raggedright\Large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{5pt}]
+	\vspace{-10pt}\scshape\raggedright\Large\bfseries
+}{}{0em}{}[\color{base03}\titlerule \vspace{5pt}]
 
 
 

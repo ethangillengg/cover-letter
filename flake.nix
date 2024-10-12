@@ -15,7 +15,7 @@
       };
 
       watcher = pkgs.writeScriptBin "watch" ''
-        tectonic -X watch -x "build --open"
+        tectonic -X build --open & tectonic -X watch
       '';
     in {
       devShell = pkgs.mkShell {
